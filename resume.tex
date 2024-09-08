@@ -18,6 +18,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{soul}
 \input{glyphtounicode}
 
 
@@ -30,8 +32,9 @@
 
 % serif
 % \usepackage{CormorantGaramond}
-% \usepackage{charter}
+\usepackage{charter}
 
+% \renewcommand{\familydefault}{\sfdefault}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -51,6 +54,10 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+\setulcolor{black}
+\setul{0.4ex}{0.1ex}
 
 % Sections formatting
 \titleformat{\section}{
@@ -86,7 +93,7 @@
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \textbf{\normalsize #1} & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -105,113 +112,143 @@
 
 \begin{document}
 
-%----------HEADING----------
+% ----------HEADING----------
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 %   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
 %   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
 % \end{tabular*}
 
-\begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
-\end{center}
+\noindent
+\begin{tabular*}{\textwidth}{m{3.2cm} @{\extracolsep{\fill}} l}
+  \includegraphics[width=2.5cm]{/home/dann/pics/profile.jpg} &
+  \begin{minipage}[c]{\textwidth}
+    \textbf{\LARGE Danni Ramdhani Samsudin} \\ [0.3em]
+    Front-End Developer \\ [0.3em]
+    \small Sumedang, West Java, Indonesia $|$ \small +6283115413495 $|$ \href{mailto:danniramdhani.s@gmail.com}{\ul{danniramdhani.s@gmail.com}} \\ [0.3em]
+    \href{https://linkedin.com/in/danniramdhani}{\ul{linkedin.com/in/danniramdhani}} $|$
+    \href{https://github.com/dannrs}{\ul{github.com/dannrs}} $|$ \href{https://danni.my.id}{\ul{danni.my.id}}
+  \end{minipage}
+\end{tabular*}
 
+%-----------SUMMARY-----------
+\section{Summary}
+\hspace{0.15in}\parbox{\dimexpr\linewidth-0.15in}{%
+  An Informatics Engineering graduate with a keen interest in web development.
+  Specializing in front-end web technologies, particularly React and Next.js.
+  Passionate about creating user-friendly and engaging web experiences.
+  Always excited to apply skills to innovative projects and contribute to
+  the ever-evolving field of web development.
+}
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Southwestern University}{Georgetown, TX}
-      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
-    \resumeSubheading
-      {Blinn College}{Bryan, TX}
-      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading
+{Sebelas April University}{\small Sumedang, West Java, Indonesia}
+{Bachelor of Informatics Engineering}{\small Sep 2018 -- Feb 2023}
+\resumeItem{\small GPA: 3.57/4.00}
+\resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
+% \section{Experience}
+%   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
-      \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeSubheading
+%       {Undergraduate Research Assistant}{June 2020 -- Present}
+%       {Texas A\&M University}{College Station, TX}
+%       \resumeItemListStart
+%         \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
+%         \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
+%         \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+%       \resumeItemListEnd
+
+% % -----------Multiple Positions Heading-----------
+% %    \resumeSubSubheading
+% %     {Software Engineer I}{Oct 2014 - Sep 2016}
+% %     \resumeItemListStart
+% %        \resumeItem{Apache Beam}
+% %          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+% %     \resumeItemListEnd
+% %    \resumeSubHeadingListEnd
+% %-------------------------------------------
+
+%     \resumeSubheading
+%       {Information Technology Support Specialist}{Sep. 2018 -- Present}
+%       {Southwestern University}{Georgetown, TX}
+%       \resumeItemListStart
+%         \resumeItem{Communicate with managers to set up campus computers used on campus}
+%         \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
+%         \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
 %     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
-    \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
+%     \resumeSubheading
+%       {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
+%       {Southwestern University}{Georgetown, TX}
+%       \resumeItemListStart
+%         \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+%         \resumeItem{Developed a game in Java to test the generated dungeons}
+%         \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
+%         \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
+%         \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
+%         \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+%       \resumeItemListEnd
 
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+%   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Vulse} $|$ \small\normalfont{\emph{Next.js, Typescript, tRPC, Lucia, Drizzle ORM, PostgreSQL, Tailwind CSS}}}
+{} \\ [0.6em]
+\href{https://vulse.vercel.app}{\small\normalfont\ul {https://vulse.vercel.app}}
+\resumeItemListStart
+\resumeItem{Developed a full-stack Next.js web application using Typescript and tRPC for seamless API development.}
+\resumeItem{Implemented Spotify OAuth using Lucia to retrieve data from users}
+\resumeItem{Utilized Drizzle ORM and PostgreSQL to implement a type-safe database layer}
+\resumeItem{Leveraged Tailwind CSS to build responsive user interfaces}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{Vulse} $|$ \small\normalfont{\emph{Next.js, Typescript, tRPC, Lucia, Drizzle ORM, PostgreSQL, Tailwind CSS}}}
+{} \\ [0.6em]
+\href{https://vulse.vercel.app}{\small\normalfont\ul {https://vulse.vercel.app}}
+\resumeItemListStart
+\resumeItem{Developed a full-stack Next.js web application using Typescript and tRPC for seamless API development.}
+\resumeItem{Implemented Spotify OAuth using Lucia to retrieve data from users}
+\resumeItem{Utilized Drizzle ORM and PostgreSQL to implement a type-safe database layer}
+\resumeItem{Leveraged Tailwind CSS to build responsive user interfaces}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
-
-
-%
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Languages}{: Javascript, Typescript, HTML, CSS} \\
+        \textbf{Frameworks}{: Next.js, React, Tailwind CSS} \\
+        \textbf{Developer Tools}{: Git, VSCode, Vim/Neovim} \\
+        \textbf{Libraries}{: tRPC, TanStack Query, shadcn/ui }
+        }}
+\end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certification}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Full Stack Open}{\small 24 Des 2024}
+{The University of Helsinki}{}
+\resumeItem{\footnotesize \href{https://www.freecodecamp.org/certification/danniramdhanis/responsive-web-design}{\small\ul {https://www.freecodecamp.org/certification/danniramdhanis/responsive-web-design}}} \\ [0.8em]
+\resumeSubheading
+{Responsive Web Design}{\small 26 Sep 2023}
+{freeCodeCamp}{}
+\resumeItem{\footnotesize \href{https://www.freecodecamp.org/certification/danniramdhanis/responsive-web-design}{\small\ul {https://www.freecodecamp.org/certification/danniramdhanis/responsive-web-design}}} \\ [0.8em]
+\resumeSubheading
+{EF SET English Cetificate 72/100 (C2 Proficient)}{\small 26 Sep 2023}
+{EF Standard English Test (EF SET)}{}
+\resumeItem{\footnotesize \href{https://www.efset.org/cert/bDDxUn}{\small\ul {https://www.efset.org/cert/bDDxUn}}}
+\resumeSubHeadingListEnd
 
 
 %-------------------------------------------
