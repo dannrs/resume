@@ -20,6 +20,7 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{soul}
+\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 
@@ -94,7 +95,7 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{\normalsize #1} & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-2pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -119,34 +120,35 @@
 % \end{tabular*}
 
 \noindent
-\begin{tabular*}{\textwidth}{m{3.2cm} @{\extracolsep{\fill}} l}
-  \includegraphics[width=2.5cm]{/home/dann/pics/profile.jpg} &
-  \begin{minipage}[c]{\textwidth}
+\begin{tabular*}{\textwidth}{l}
     \textbf{\LARGE Danni Ramdhani Samsudin} \\ [0.3em]
-    Front-End Developer \\ [0.3em]
-    \small Sumedang, West Java, Indonesia $|$ \small +6283115413495 $|$ \href{mailto:danniramdhani.s@gmail.com}{\ul{danniramdhani.s@gmail.com}} \\ [0.3em]
-    \href{https://linkedin.com/in/danniramdhani}{\ul{linkedin.com/in/danniramdhani}} $|$
-    \href{https://github.com/dannrs}{\ul{github.com/dannrs}} $|$ \href{https://danni.my.id}{\ul{danni.my.id}}
-  \end{minipage}
+    Full-Stack Developer \\ [0.3em]
+    {\footnotesize\faMapMarker*} Sumedang, Jawa Barat \\ [0.3em]
+    {\footnotesize\faEnvelope} \href{mailto:danniramdhani.s@gmail.com}{\ul{danniramdhani.s@gmail.com}}
+    \hspace{0.5em}
+    {\footnotesize\faLinkedin} \href{https://linkedin.com/in/danniramdhani}{\ul{linkedin.com/in/danniramdhani}} \\ [0.3em]
+    {\footnotesize\faGithub} \href{https://github.com/dannrs}{\ul{github.com/dannrs}}
+    \hspace{0.5em}
+    {\footnotesize\faLink} \href{https://danni.my.id}{\ul{danni.my.id}}
 \end{tabular*}
 
 %-----------SUMMARY-----------
 \section{Summary}
 \hspace{0.15in}\parbox{\dimexpr\linewidth-0.15in}{%
-  An Informatics Engineering graduate with a keen interest in web development.
-  Specializing in front-end web technologies, particularly React and Next.js.
-  Passionate about creating user-friendly and engaging web experiences.
-  Always excited to apply skills to innovative projects and contribute to
-  the ever-evolving field of web development.
+  Lulusan Teknik Informatika dengan minat besar di bidang pengembangan web. 
+  Seorang {\emph{full-stack}} developer, dengan pengalaman menggunakan teknologi terbaru seperti 
+  React dan Next.js. Antusias dalam menciptakan web berkinerja tinggi yang juga ramah dan 
+  menarik bagi pengguna. Bersemangat untuk berkolaborasi dan berkontribusi pada proyek-proyek
+  inovatif di bidang pengembangan web.
 }
 
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Sebelas April University}{\small Sumedang, West Java, Indonesia}
-{Bachelor of Informatics Engineering}{\small Sep 2018 -- Feb 2023}
-\resumeItem{\small GPA: 3.57/4.00}
+{Universitas Sebelas April}{\small Sumedang, Jawa Barat}
+{Sarjana Teknik Informatika}{\small Sep 2018 -- Feb 2023}
+\resumeItem{\small IPK: 3.57/4.00}
 \resumeSubHeadingListEnd
 
 
@@ -201,24 +203,29 @@
 \section{Projects}
 \resumeSubHeadingListStart
 \resumeProjectHeading
-{\textbf{Vulse} $|$ \small\normalfont{\emph{Next.js, Typescript, tRPC, Lucia, Drizzle ORM, PostgreSQL, Tailwind CSS}}}
+{\textbf{Oprec FOJB} \hspace{0em} \href{https://github.com/dannrs/oprec}{\footnotesize\faGithub} \href{https://oprec.forumosisjabar.id}{\footnotesize\faLink} \hspace{0em} \small\normalfont{\emph{(Next.js, React, Typescript, Tailwind CSS, Drizzle ORM, PostgreSQL, Docker)}}}
 {} \\ [0.6em]
-\href{https://vulse.vercel.app}{\small\normalfont\ul {https://vulse.vercel.app}}
 \resumeItemListStart
-\resumeItem{Developed a full-stack Next.js web application using Typescript and tRPC for seamless API development.}
-\resumeItem{Implemented Spotify OAuth using Lucia to retrieve data from users}
-\resumeItem{Utilized Drizzle ORM and PostgreSQL to implement a type-safe database layer}
-\resumeItem{Leveraged Tailwind CSS to build responsive user interfaces}
+\resumeItem{Mengembangkan aplikasi web {\emph{full-stack}} untuk proses pendaftaran anggota baru Forum OSIS Jawa Barat menggunakan Next.js, TypeScript, dan Tailwind CSS.}
+\resumeItem{Menjalankan aplikasi dalam kontainer Docker untuk memastikan konsistensi lingkungan pengembangan dan produksi.}
+\resumeItem{Mengintegrasikan Github Actions untuk otomatisasi {\emph{deployment}} ke VPS berbasis Docker Swarm.}
 \resumeItemListEnd
 \resumeProjectHeading
-{\textbf{Vulse} $|$ \small\normalfont{\emph{Next.js, Typescript, tRPC, Lucia, Drizzle ORM, PostgreSQL, Tailwind CSS}}}
+{\textbf{Vulse} \hspace{0em} \href{https://github.com/dannrs/vulse}{\footnotesize\faGithub} \href{https://vulse.vercel.app/dannrs}{\footnotesize\faLink} \hspace{0em} \small\normalfont{\emph{(Next.js, React, Typescript, tRPC, Drizzle ORM, PostgreSQL, Tailwind CSS)}}}
 {} \\ [0.6em]
-\href{https://vulse.vercel.app}{\small\normalfont\ul {https://vulse.vercel.app}}
 \resumeItemListStart
-\resumeItem{Developed a full-stack Next.js web application using Typescript and tRPC for seamless API development.}
-\resumeItem{Implemented Spotify OAuth using Lucia to retrieve data from users}
-\resumeItem{Utilized Drizzle ORM and PostgreSQL to implement a type-safe database layer}
-\resumeItem{Leveraged Tailwind CSS to build responsive user interfaces}
+\resumeItem{Mengembangkan aplikasi web {\emph{full-stack}} menggunakan Next.js, TypeScript, dan tRPC untuk pengembangan frontend dan backend yang
+mulus.}
+\resumeItem{Menggunakan PostgreSQL bersama dengan Drizzle ORM untuk membangun database yang {\emph{type-safe}}.}
+\resumeItem{Memanfaatkan Tailwind CSS untuk membuat antarmuka pengguna yang responsif.}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{Portfolio Website} \hspace{0em} \href{https://github.com/dannrs/danni.my.id}{\footnotesize\faGithub} \href{https://danni.my.id}{\footnotesize\faLink} \hspace{0em} \small\normalfont{\emph{(Astro, React, Typescript, Tailwind CSS)}}}
+{} \\ [0.6em]
+\resumeItemListStart
+\resumeItem{Dibangun menggunakan Astro untuk mengoptimalkan performa dan SEO}
+\resumeItem{Mengintegrasikan React di dalam Astro untuk interaktivitas {\emph{front-end}}}
+\resumeItem{Menerapkan TypeScript untuk memastikan {\emph{type safety}} dan kemudahan pemeliharaan.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -226,10 +233,10 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: Javascript, Typescript, HTML, CSS} \\
-        \textbf{Frameworks}{: Next.js, React, Tailwind CSS} \\
-        \textbf{Developer Tools}{: Git, VSCode, Vim/Neovim} \\
-        \textbf{Libraries}{: tRPC, TanStack Query, shadcn/ui }
+        \textbf{Languages}{: HTML, CSS, Javascript, Typescript} \\
+        \textbf{Frameworks \& Libraries}{: Next.js, React, Astro, Tailwind CSS, Drizzle ORM, Tanstack Query, tRPC} \\
+        \textbf{Databases}{: PostgreSQL} \\
+        \textbf{Developer Tools}{: Linux, Docker, Git, VSCode, Vim/Neovim} \\
         }}
 \end{itemize}
 
@@ -237,9 +244,9 @@
 \section{Certification}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Full Stack Open}{\small 24 Des 2024}
+{Full Stack Open}{\small 26 Sep 2024}
 {The University of Helsinki}{}
-\resumeItem{\footnotesize \href{https://www.freecodecamp.org/certification/danniramdhanis/responsive-web-design}{\small\ul {https://www.freecodecamp.org/certification/danniramdhanis/responsive-web-design}}} \\ [0.8em]
+\resumeItem{\footnotesize \href{https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/22ecfe5952ee17949bee3f3a79dbbbd6}{\small\ul {https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/22ecfe5952ee17...}}} \\ [0.8em]
 \resumeSubheading
 {Responsive Web Design}{\small 26 Sep 2023}
 {freeCodeCamp}{}

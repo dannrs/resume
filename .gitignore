@@ -1,1 +1,23 @@
-build/
+# LaTeX intermediate and output files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+
+# PDF output (optional, if you don't want to track the compiled PDF)
+*.pdf
+
+# Editor/OS files
+*~
+*.swp
+.DS_Store
+.vscode/
